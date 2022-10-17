@@ -5,11 +5,11 @@
  * * * * * * * * * * * * * * * * * * * * * * */
 $host = "localhost";
 $user = "root";
-$pwd = "bramanto";
+$pwd = "";
 $db = "db_splaptop";
 
-$connect = mysql_connect($host, $user, $pwd) or die(mysql_error());
-$db_select = mysql_select_db($db);
+$connect = mysqli_connect($host, $user, $pwd) or die(mysql_error());
+$db_select = mysqli_select_db($connect, $db);
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * 

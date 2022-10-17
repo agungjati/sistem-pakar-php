@@ -34,7 +34,7 @@
 	</div>
 	<div class='box-content'>
 			<div class='feed-list text-center'>
-					<img src='./img/urindo_transparent.png' class='text-center img-responsive'>
+					<!-- <img src='./img/urindo_transparent.png' class='text-center img-responsive'> --!>
 					<p style='font-size:12px; line-height:40px;' class='text-dark'>$app_powered</p>
 			</div>
 	</div>

@@ -23,13 +23,14 @@
 												# Start : Execute Button Login
 												if($p_login){
 													$param1=$_POST[param1];
-													$param2=MD5($_POST[param2]);
+													$param2=$_POST[param2];
 
 													echo "<div class='alert alert-danger' style='padding:8px'>";
-													$hasil=mysql_query("SELECT id_pengguna as uid, nm_lengkap
-														FROM tbl_pengguna WHERE nm_pengguna='$param1' AND sandi='$param2'");
-													if(mysql_num_rows($hasil)>0){
-														$row = mysql_fetch_array($hasil);
+													$hasil=mysqli_query($connect, "SELECT id_pengguna as uid, nm_lengkap
+														FROM tbl_pengguna WHERE nm_pengguna='$param1' AND sandi= md5('$param2')");
+													
+													if(mysqli_num_rows($hasil)>0){
+														$row = mysqli_fetch_array($hasil);
 														session_start();
 														$_SESSION['uid'] = $row[uid];
 														$_SESSION['nm_lengkap']  = $row[nm_lengkap];

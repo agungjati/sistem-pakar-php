@@ -1,7 +1,7 @@
 	<?php
 
 	# Truncate Table For Start Consultation
-	$sql = mysql_query("TRUNCATE TABLE tbl_temp");
+	$sql = mysqli_query($connect, "TRUNCATE TABLE tbl_temp");
 	echo "
 	<div class='col-xs-12 col-md-12'>
 			<div class='row'>
